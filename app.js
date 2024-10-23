@@ -17,7 +17,6 @@ for( let i=0; i < number; i++){
     }
     }
 }
-factorLister(15)
 
 function factorial(n){
     if (n<=0){
@@ -29,5 +28,14 @@ function factorial(n){
     }
     return result;
 }
-console.log(factorial(-6));
-factorLister(9);
+
+function occupyParking(spaces, yesterday,today){
+    let occupyAnswer = 0
+    for(let i=0; i<=spaces; i++){
+        if (today[i] === "C"  && yesterday[i] === "C"){
+        occupyAnswer +=1
+        }
+    }
+    console.log(occupyAnswer)
+}
+occupyParking(5, 'CC..C', '.CC..')
