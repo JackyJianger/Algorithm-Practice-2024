@@ -38,4 +38,17 @@ function occupyParking(spaces, yesterday,today){
     }
     console.log(occupyAnswer)
 }
-occupyParking(5, 'CC..C', '.CC..')
+
+function binaryConvertToDecimal(number){
+    let decimalValue = 0;
+    let length = number.toString().length-1
+    let numberstring = number.toString()
+    let reverse = number
+    for(i=0; i<=length; i++){
+        if (numberstring[i]==='1'){
+        decimalValue += 2**(i);
+    }
+}
+console.log(decimalValue)
+}
+binaryConvertToDecimal(1101)
