@@ -39,9 +39,25 @@ function occupyParking(spaces, yesterday, today) {
   console.log(occupyAnswer);
 }
 
+function decimalToBinary(numberdec){
+    let binaryListName=[]
+    while (numberdec > 0){
+    if (numberdec % 2===0){
+    numberdec = numberdec/2
+    binaryListName.push(0)
+    }
+    else {
+    numberdec = Math.floor(numberdec / 2);
+    binaryListName.push(1)
+    }
+    }
+let outputAnswer = binaryListName.reverse().join('')
+    console.log(outputAnswer)
+}
+decimalToBinary(13)
 function binaryToDecimal(number) {
   let length = number.toString().length - 1;
-  let reverse = number.toString.split("").reverse().join("");
+  let reverse = number.toString().split("").reverse().join("");
   let decimalAnswer = 0;
   for (i = 0; i <= length; i++) {
     if (reverse[i] === "1") {
@@ -50,4 +66,4 @@ function binaryToDecimal(number) {
   }
   console.log(decimalAnswer);
 }
-binaryToDecimal(1101);
+
